@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3 class="modal-name cap">${user.name.first} ${user.name.last}</h3>
                 <p class="modal-text">${user.email}</p>
                 <p class="modal-text cap">${user.location.city}</p>
+                <hr>
                 <p class="modal-text">${user.cell}</p>
                 <p class="modal-text">${user.location.street.number} ${user.location.street.name}, ${user.location.city}, ${user.location.state} ${user.location.postcode}</p>
                 <p class="modal-text">Birthday: ${user.dob.date.substring(0, 10)}</p>
@@ -122,15 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
             openModal(data.results[newIndex]);
         }
     }
-
-    // Create and append the search form HTML
-    const searchFormHTML = `
-        <form action="#" method="get">
-            <input type="search" id="search-input" class="search-input" placeholder="Search...">
-            <input type="submit" value="&#x1F50D;" id="search-submit" class="search-submit">
-        </form>
-    `;
-    gallery.insertAdjacentHTML('beforebegin', searchFormHTML);
 
     // Function to filter the directory by name
     function searchFilter() {
